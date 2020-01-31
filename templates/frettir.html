@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %} hasarfrettir {% endblock %}
+
+{% block content %}
+    <div class="row">
+        <section>
+            <h1>{{ frettir[0][1] }}</h1>
+            <img src="/assets/mynd herna">
+        </section>
+        <section>
+            <p>hasarfrettir dagsins</p>
+            <ul>
+            {% for item in frettir %}
+            <li><a href="/frett/{{ item[0] }}"> {{ item[1] }}</a></li>
+            {% endfor %}
+            </ul>
+        </section>
+    </div>
+{% endblock %}
